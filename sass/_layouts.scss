@@ -45,7 +45,8 @@
   border-radius: 1rem;
   position: relative;
   z-index: 2;
-  @media (max-width: $bp-small) {
+  @media screen and (max-width: 37.5rem) {
+    width: 90%;
     background-image: linear-gradient(
         to right,
         hsla(257, 27%, 26%, 0.9),
@@ -73,7 +74,7 @@
 
 .row {
   display: flex;
-  @media (max-width: $bp-small) {
+  @media screen and (max-width: 37.5rem) {
     flex-direction: column;
   }
 }
@@ -91,7 +92,7 @@
   position: relative;
   text-align: center;
 
-  @media (max-width: $bp-small) {
+  @media screen and (max-width: 37.5rem) {
     background-image: linear-gradient(
         to right,
         hsla(257, 27%, 26%, 0.9),
@@ -108,7 +109,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $bp-small) {
+  @media screen and (max-width: 37.5rem) {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -150,7 +151,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: $bp-small) {
+    @media screen and (max-width: 37.5rem) {
       & > .footer__item {
         margin-right: 2rem;
       }

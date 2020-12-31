@@ -31,14 +31,14 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 37.5rem) {
     html {
       font-size: 50%; } }
 
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem; }
-  @media (max-width: 375px) {
+  @media screen and (max-width: 37.5rem) {
     body {
       width: 100%; } }
 
@@ -51,13 +51,13 @@ h3 {
 
 .heading-primary {
   font-size: 6.5rem; }
-  @media (max-width: 375px) {
+  @media screen and (max-width: 37.5rem) {
     .heading-primary {
       font-size: 5rem; } }
 
 .heading-secondary {
   font-size: 4rem; }
-  @media (max-width: 375px) {
+  @media screen and (max-width: 37.5rem) {
     .heading-secondary {
       font-size: 3rem; } }
 
@@ -79,11 +79,14 @@ h3 {
   list-style: none;
   margin-right: auto;
   display: flex; }
+  @media screen and (max-width: 37.5rem) {
+    .navbar__nav {
+      display: none; } }
 
 .navbar__auth {
   list-style: none;
   display: flex; }
-  @media (max-width: 375px) {
+  @media (max-width: 37.5rem) {
     .navbar__auth {
       display: none; } }
 
@@ -99,18 +102,26 @@ h3 {
 
 .btn {
   text-decoration: none;
-  display: inline-block; }
-  .btn--primary {
-    background-color: var(--color-primary-1);
+  display: inline-block;
+  cursor: pointer; }
+  .btn--primary, .btn--secondary {
     color: #fff;
     padding: 0.7rem 2rem;
     border-radius: 50px;
     transition: all 0.2s; }
     @media (max-width: 375px) {
-      .btn--primary {
+      .btn--primary, .btn--secondary {
         padding: 2rem 5rem; } }
-    .btn--primary:hover {
+    .btn--primary:hover, .btn--secondary:hover {
       transform: translateY(-3px); }
+  .btn--primary {
+    background-color: var(--color-primary-1); }
+  .btn--secondary {
+    background-color: var(--color-primary-2); }
+  .btn--copy {
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 700; }
 
 .manifest {
   width: 50rem;
@@ -126,7 +137,7 @@ h3 {
 .shorten__form {
   display: flex;
   justify-content: center; }
-  @media (max-width: 375px) {
+  @media (max-width: 37.5rem) {
     .shorten__form {
       flex-direction: column; } }
 
@@ -137,7 +148,7 @@ h3 {
   border-radius: 5px;
   outline: none;
   border: 0; }
-  @media (max-width: 375px) {
+  @media screen and (max-width: 37.5rem) {
     .shorten__link {
       margin-right: 0; } }
   .shorten__link::-webkit-input-placeholder {
@@ -153,7 +164,7 @@ h3 {
   font-size: 2rem;
   font-weight: 700;
   cursor: pointer; }
-  @media (max-width: 375px) {
+  @media screen and (max-width: 37.5rem) {
     .shorten__button {
       padding: 2rem 0;
       margin-top: 1.5rem; } }
@@ -164,6 +175,34 @@ h3 {
   align-items: center;
   margin-bottom: 10rem; }
 
+.statistics__link {
+  background-color: #fff;
+  margin-bottom: 2rem;
+  padding: 2rem 5rem;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center; }
+  @media screen and (max-width: 37.5rem) {
+    .statistics__link {
+      flex-direction: column; } }
+  .statistics__link--text {
+    margin-right: auto; }
+    @media screen and (max-width: 37.5rem) {
+      .statistics__link--text {
+        flex: 0 0 80%;
+        margin: 0;
+        font-size: 1.4rem;
+        margin-bottom: 1rem; } }
+  .statistics__link--shortened {
+    margin-right: 3rem;
+    color: var(--color-primary-1); }
+    @media screen and (max-width: 37.5rem) {
+      .statistics__link--shortened {
+        flex: 0 0 80%;
+        margin: 0;
+        font-size: 1.4rem;
+        margin-bottom: 1rem; } }
+
 .icon-box {
   background-color: #fff;
   border-radius: 5px;
@@ -172,7 +211,7 @@ h3 {
   align-self: end; }
   .icon-box:not(:last-of-type) {
     margin-right: 3rem; }
-    @media (max-width: 375px) {
+    @media screen and (max-width: 37.5rem) {
       .icon-box:not(:last-of-type) {
         margin-right: 0; } }
     .icon-box:not(:last-of-type)::before {
@@ -184,7 +223,7 @@ h3 {
       right: -3rem;
       top: 50%;
       background-color: var(--color-primary-1); }
-    @media (max-width: 375px) {
+    @media screen and (max-width: 37.5rem) {
       .icon-box:not(:last-of-type)::before {
         display: none; }
       .icon-box:not(:last-of-type)::after {
@@ -197,7 +236,7 @@ h3 {
         left: 49%;
         top: 100%;
         background-color: var(--color-primary-1); } }
-  @media (max-width: 375px) {
+  @media screen and (max-width: 37.5rem) {
     .icon-box {
       text-align: center; } }
   .icon-box__icon {
@@ -207,14 +246,14 @@ h3 {
     border-radius: 50%;
     position: absolute;
     top: -4rem; }
-    @media (max-width: 375px) {
+    @media screen and (max-width: 37.5rem) {
       .icon-box__icon {
         top: -1rem;
         left: 50%;
         transform: translate(-50%, -50%); } }
   .icon-box--2 {
     margin-top: 6rem; }
-    @media (max-width: 375px) {
+    @media screen and (max-width: 37.5rem) {
       .icon-box--2 {
         margin-top: 12rem; } }
   .icon-box--3 {
@@ -259,8 +298,9 @@ h3 {
   border-radius: 1rem;
   position: relative;
   z-index: 2; }
-  @media (max-width: 375px) {
+  @media screen and (max-width: 37.5rem) {
     .shorten {
+      width: 90%;
       background-image: linear-gradient(to right, rgba(59, 48, 84, 0.9), rgba(59, 48, 84, 0.9)), url(../images/bg-shorten-mobile.svg);
       background-repeat: no-repeat;
       background-position: top;
@@ -280,7 +320,7 @@ h3 {
 
 .row {
   display: flex; }
-  @media (max-width: 375px) {
+  @media screen and (max-width: 37.5rem) {
     .row {
       flex-direction: column; } }
 
@@ -292,7 +332,7 @@ h3 {
   padding: 6rem 0;
   position: relative;
   text-align: center; }
-  @media (max-width: 375px) {
+  @media screen and (max-width: 37.5rem) {
     .cta {
       background-image: linear-gradient(to right, rgba(59, 48, 84, 0.9), rgba(59, 48, 84, 0.9)), url(../images/bg-boost-mobile.svg); } }
 
@@ -301,7 +341,7 @@ h3 {
   padding: 8rem 12%;
   display: flex;
   justify-content: space-between; }
-  @media (max-width: 375px) {
+  @media screen and (max-width: 37.5rem) {
     .footer {
       flex-direction: column;
       align-items: center;
@@ -323,7 +363,7 @@ h3 {
   .footer__social {
     display: flex;
     justify-content: space-between; }
-    @media (max-width: 375px) {
+    @media screen and (max-width: 37.5rem) {
       .footer__social > .footer__item {
         margin-right: 2rem; } }
   .footer__link {

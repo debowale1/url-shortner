@@ -10,15 +10,15 @@
     list-style: none;
     margin-right: auto;
     display: flex;
-    @media (max-width: $bp-small) {
-      // display: none;
+    @media screen and (max-width: 37.5rem) {
+      display: none;
     }
   }
 
   &__auth {
     list-style: none;
     display: flex;
-    @media (max-width: $bp-small) {
+    @media (max-width: 37.5rem) {
       display: none;
     }
   }
@@ -43,8 +43,9 @@
 .btn {
   text-decoration: none;
   display: inline-block;
-  &--primary {
-    background-color: var(--color-primary-1);
+  cursor: pointer;
+  &--primary,
+  &--secondary {
     color: #fff;
     padding: 0.7rem 2rem;
     border-radius: 50px;
@@ -57,6 +58,20 @@
     &:hover {
       transform: translateY(-3px);
     }
+  }
+
+  &--primary {
+    background-color: var(--color-primary-1);
+  }
+
+  &--secondary {
+    background-color: var(--color-primary-2);
+  }
+
+  &--copy {
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
   }
 }
 
@@ -80,7 +95,7 @@
     display: flex;
     justify-content: center;
 
-    @media (max-width: $bp-small) {
+    @media (max-width: 37.5rem) {
       flex-direction: column;
     }
   }
@@ -92,7 +107,7 @@
     border-radius: 5px;
     outline: none;
     border: 0;
-    @media (max-width: $bp-small) {
+    @media screen and (max-width: 37.5rem) {
       margin-right: 0;
     }
     &::-webkit-input-placeholder {
@@ -111,7 +126,7 @@
     font-weight: 700;
     cursor: pointer;
 
-    @media (max-width: $bp-small) {
+    @media screen and (max-width: 37.5rem) {
       padding: 2rem 0;
       margin-top: 1.5rem;
     }
@@ -124,6 +139,43 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 10rem;
+  }
+
+  &__links {
+  }
+
+  &__link {
+    background-color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 5rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 37.5rem) {
+      flex-direction: column;
+    }
+
+    &--text {
+      margin-right: auto;
+      @media screen and (max-width: 37.5rem) {
+        flex: 0 0 80%;
+        margin: 0;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &--shortened {
+      margin-right: 3rem;
+      color: var(--color-primary-1);
+      @media screen and (max-width: 37.5rem) {
+        flex: 0 0 80%;
+        margin: 0;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }
 ///////////////////////////////////
@@ -138,7 +190,7 @@
 
   &:not(:last-of-type) {
     margin-right: 3rem;
-    @media (max-width: $bp-small) {
+    @media screen and (max-width: 37.5rem) {
       margin-right: 0;
     }
 
@@ -153,7 +205,7 @@
       background-color: var(--color-primary-1);
     }
 
-    @media (max-width: $bp-small) {
+    @media screen and (max-width: 37.5rem) {
       &::before {
         display: none;
       }
@@ -172,7 +224,7 @@
     }
   }
 
-  @media (max-width: $bp-small) {
+  @media screen and (max-width: 37.5rem) {
     text-align: center;
   }
 
@@ -184,7 +236,7 @@
     position: absolute;
     top: -4rem;
 
-    @media (max-width: $bp-small) {
+    @media screen and (max-width: 37.5rem) {
       top: -1rem;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -195,7 +247,7 @@
   }
   &--2 {
     margin-top: 6rem;
-    @media (max-width: $bp-small) {
+    @media screen and (max-width: 37.5rem) {
       margin-top: 12rem;
     }
   }
