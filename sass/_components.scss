@@ -1,7 +1,7 @@
 .navbar {
   &__logo {
     margin-right: 5rem;
-    @media (max-width: $bp-small) {
+    @media (max-width: 37.5rem) {
       margin-right: 2rem;
     }
   }
@@ -94,7 +94,7 @@ input[type="button"] {
   line-height: 1.2;
   margin-left: 12%;
 
-  @media (max-width: $bp-small) {
+  @media (max-width: 40.5rem) {
     margin-top: 30rem;
     margin-left: 0;
     padding-left: 5%;
@@ -107,7 +107,7 @@ input[type="button"] {
     display: flex;
     justify-content: center;
 
-    @media (max-width: 37.5rem) {
+    @media screen and (max-width: 37.5rem) {
       flex-direction: column;
     }
   }
@@ -119,6 +119,10 @@ input[type="button"] {
     border-radius: 5px;
     outline: none;
     border: 0;
+
+    @media screen and (max-width: 40.5rem) {
+      flex: 0 0 100%;
+    }
     @media screen and (max-width: 37.5rem) {
       margin-right: 0;
     }
@@ -138,7 +142,12 @@ input[type="button"] {
     font-weight: 700;
     cursor: pointer;
 
+    @media screen and (max-width: 40.5rem) {
+      flex: 0 0 100%;
+    }
+
     @media screen and (max-width: 37.5rem) {
+      flex: 0 0 100%;
       padding: 2rem 0;
       margin-top: 1.5rem;
     }

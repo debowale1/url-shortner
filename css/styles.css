@@ -71,7 +71,7 @@ h3 {
 
 .navbar__logo {
   margin-right: 5rem; }
-  @media (max-width: 375px) {
+  @media (max-width: 37.5rem) {
     .navbar__logo {
       margin-right: 2rem; } }
 
@@ -136,7 +136,7 @@ input[type="button"] {
   width: 50rem;
   line-height: 1.2;
   margin-left: 12%; }
-  @media (max-width: 375px) {
+  @media (max-width: 40.5rem) {
     .manifest {
       margin-top: 30rem;
       margin-left: 0;
@@ -146,7 +146,7 @@ input[type="button"] {
 .shorten__form {
   display: flex;
   justify-content: center; }
-  @media (max-width: 37.5rem) {
+  @media screen and (max-width: 37.5rem) {
     .shorten__form {
       flex-direction: column; } }
 
@@ -157,6 +157,9 @@ input[type="button"] {
   border-radius: 5px;
   outline: none;
   border: 0; }
+  @media screen and (max-width: 40.5rem) {
+    .shorten__link {
+      flex: 0 0 100%; } }
   @media screen and (max-width: 37.5rem) {
     .shorten__link {
       margin-right: 0; } }
@@ -173,8 +176,12 @@ input[type="button"] {
   font-size: 2rem;
   font-weight: 700;
   cursor: pointer; }
+  @media screen and (max-width: 40.5rem) {
+    .shorten__button {
+      flex: 0 0 100%; } }
   @media screen and (max-width: 37.5rem) {
     .shorten__button {
+      flex: 0 0 100%;
       padding: 2rem 0;
       margin-top: 1.5rem; } }
 
@@ -280,7 +287,7 @@ input[type="button"] {
   align-items: center;
   padding: 5rem 12%;
   border-bottom: 1px solid #f4f4f4; }
-  @media (max-width: 375px) {
+  @media screen and (max-width: 37.5rem) {
     .navbar {
       padding: 3rem 5%; } }
 
@@ -291,8 +298,9 @@ input[type="button"] {
   background-size: 70rem;
   padding: 12rem 0 25rem;
   display: flex;
-  align-items: center; }
-  @media (max-width: 375px) {
+  align-items: center;
+  position: relative; }
+  @media (max-width: 40.5rem) {
     .header {
       text-align: center;
       background-position: 8rem 1rem;
@@ -300,6 +308,7 @@ input[type="button"] {
       padding-bottom: 10rem; } }
 
 .shorten {
+  width: 80%;
   margin-left: 12%;
   margin-right: 12%;
   background-image: linear-gradient(to right, rgba(59, 48, 84, 0.9), rgba(59, 48, 84, 0.9)), url(../images/bg-shorten-desktop.svg);
@@ -310,16 +319,13 @@ input[type="button"] {
   border-radius: 1rem;
   position: relative;
   z-index: 2; }
-  @media screen and (max-width: 37.5rem) {
+  @media screen and (max-width: 40.5rem) {
     .shorten {
-      width: 90%;
       background-image: linear-gradient(to right, rgba(59, 48, 84, 0.9), rgba(59, 48, 84, 0.9)), url(../images/bg-shorten-mobile.svg);
       background-repeat: no-repeat;
       background-position: top;
-      background-size: 40rem;
-      margin-left: 5%;
-      margin-right: 5%;
-      padding: 3rem 5%; } }
+      background-size: 48rem;
+      padding: 3rem 8%; } }
 
 .statistics {
   background-color: #f0f1f6;

@@ -7,7 +7,7 @@
   padding: 5rem 12%;
   border-bottom: 1px solid #f4f4f4;
 
-  @media (max-width: $bp-small) {
+  @media screen and (max-width: 37.5rem) {
     padding: 3rem 5%;
   }
 }
@@ -20,7 +20,8 @@
   padding: 12rem 0 25rem;
   display: flex;
   align-items: center;
-  @media (max-width: $bp-small) {
+  position: relative;
+  @media (max-width: 40.5rem) {
     text-align: center;
     background-position: 8rem 1rem;
     background-size: 55rem;
@@ -30,6 +31,11 @@
 
 .shorten {
   // @include container;
+  width: 80%;
+  // position: absolute;
+  // top: 130%;
+  // left: 10%;
+
   margin-left: 12%;
   margin-right: 12%;
   background-image: linear-gradient(
@@ -45,8 +51,9 @@
   border-radius: 1rem;
   position: relative;
   z-index: 2;
-  @media screen and (max-width: 37.5rem) {
-    width: 90%;
+  @media screen and (max-width: 40.5rem) {
+    // width: 90%;
+    // left: 5%;
     background-image: linear-gradient(
         to right,
         hsla(257, 27%, 26%, 0.9),
@@ -55,10 +62,10 @@
       url(../images/bg-shorten-mobile.svg);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 40rem;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 3rem 5%;
+    background-size: 48rem;
+    // margin-left: 5%;
+    // margin-right: 5%;
+    padding: 3rem 8%;
   }
 }
 
