@@ -103,13 +103,16 @@ h3 {
 .btn {
   text-decoration: none;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  border: none; }
+  .btn:focus {
+    border: none; }
   .btn--primary, .btn--secondary {
     color: #fff;
     padding: 0.7rem 2rem;
     border-radius: 50px;
     transition: all 0.2s; }
-    @media (max-width: 375px) {
+    @media (max-width: 37.5rem) {
       .btn--primary, .btn--secondary {
         padding: 2rem 5rem; } }
     .btn--primary:hover, .btn--secondary:hover {
@@ -122,6 +125,12 @@ h3 {
     border: none;
     border-radius: 0.5rem;
     font-weight: 700; }
+    .btn--copy:active {
+      background-color: --color-primary-2; }
+
+input[type="button"] {
+  outline: none;
+  border: none; }
 
 .manifest {
   width: 50rem;
