@@ -1,4 +1,5 @@
 const shortenBtn = document.querySelector('#shorten-btn');
+const statisticsLinks = document.querySelector('.statistics__links');
 
 shortenBtn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -6,7 +7,6 @@ shortenBtn.addEventListener('click', (e) => {
   fetch(`https://api.shrtco.de/v2/shorten?url=${shortenLink}`)
         .then(resp => resp.json())
         .then(data => {
-          console.log(data);
           //build and paint ui
           displayShortenLink(data.result)
           //clear input
@@ -16,7 +16,7 @@ shortenBtn.addEventListener('click', (e) => {
 });
 
 function displayShortenLink(data) {
-  let output;
+  
   const {original_link, full_short_link} = data;
   const link = document.createElement('div');
   link.className = 'statistics__link';
@@ -25,6 +25,21 @@ function displayShortenLink(data) {
         <button class="btn btn--primary btn--copy">Copy!</button>`;
   
   //select parent element
-  document.querySelector('.statisctics__links').appendChild(link);
+  document.querySelector('.statistics__links').appendChild(link);
+
+}
+
+
+statisticsLinks.addEventListener('click', copyTextToClipboard)
+//copy function
+function copyTextToClipboard(e) {
+
+  if(e.target.classList.contains('btn--copy')){
+    //get the previous element sibling of the button
+    const copyText = e.target.previousElementSibling.innerText;
+    navigator.clipboard.writeText(copyText);
+  /* Alert the copied text */
+    alert(`Copied: ${copyText}`);
+  }
 
 }

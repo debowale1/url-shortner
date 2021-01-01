@@ -175,6 +175,9 @@ h3 {
   align-items: center;
   margin-bottom: 10rem; }
 
+.statistics__links {
+  padding: 1rem 0; }
+
 .statistics__link {
   background-color: #fff;
   margin-bottom: 2rem;
